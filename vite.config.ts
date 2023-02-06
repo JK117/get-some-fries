@@ -23,4 +23,18 @@ export default defineConfig({
       ]
     }),
   ],
+  server: {
+    port: 8080,
+    open: true,
+  },
+  build: {
+    outDir: '../neo-frame-dist',
+    emptyOutDir: true,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+  }
 })
