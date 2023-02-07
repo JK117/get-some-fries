@@ -5,9 +5,9 @@ import router from './router'
 import * as Icons from "@ant-design/icons-vue";
 
 router.beforeEach((to, from) => {
-    console.log("--- Router update ---")
-    console.log("Router: from ", from)
-    console.log("Router: to ", to)
+    console.log("--- Router updated ---")
+    console.log("Router: from ", from.fullPath)
+    console.log("Router: to ", to.fullPath)
 })
 
 const app = createApp(App)
