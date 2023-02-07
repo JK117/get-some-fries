@@ -9,7 +9,7 @@
 </template>
 
 
-<style scoped>
+<style scoped lang="scss">
 .main-inner-box {
     display: flex;
     min-height: calc(100% - 1px);

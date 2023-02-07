@@ -36,7 +36,7 @@ watch(
 </template>
 
 
-<style scoped>
+<style scoped lang="scss">
 .app-logo {
   height: 32px;
   margin: 16px;

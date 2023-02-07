@@ -22,6 +22,7 @@ export default defineConfig({
       resolvers: [
         AntDesignVueResolver({
           resolveIcons: true,
+          // importStyle: "css"
         })
       ]
     }),
@@ -38,6 +39,14 @@ export default defineConfig({
       // threshold: 256
     })
   ],
+  // INEFFECTIVE: scss entry is imported in main.js for now
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       additionalData: `@use "./src/styles/index.scss" as *;`
+  //     }
+  //   }
+  // },
   server: {
     port: 8080,
     open: true,

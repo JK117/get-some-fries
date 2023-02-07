@@ -13,7 +13,7 @@
     </a-layout>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .app-layout {
     height: 100vh;
 }

@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
-import './style.css'
+// import './style.css'
+import './styles/index.scss'
 import App from './App.vue'
 import router from './router'
 import * as Icons from "@ant-design/icons-vue";
