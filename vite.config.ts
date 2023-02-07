@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import path from 'path'
+// import path from 'path'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -10,7 +10,8 @@ import viteCompression from 'vite-plugin-compression'
 export default defineConfig({
   resolve: {
     alias: {
-      '@' : path.resolve(__dirname, './src'),
+      // '@' : path.resolve(__dirname, './src'),
+      '@': '/src',
     }
   },
   plugins: [
