@@ -1,4 +1,20 @@
-# Vue 3 + TypeScript + Vite
+<h1 align="center">Get Some Fries</h1>
+
+<p align="center">
+    <a href="https://gitmoji.dev">
+        <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+    </a>
+</p>
+
+## Intro
+Get Some Fries is a personal playground project. The scaffold template created by Vite includes: 
+- Vue3
+- TypeScript
+- Vue-Router 4
+- Ant Design Vue
+
+
+<!-- # Vue 3 + TypeScript + Vite
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
@@ -15,4 +31,4 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 1. Disable the built-in TypeScript Extension
    1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+2. Reload the VSCode window by running `Developer: Reload Window` from the command palette. -->
