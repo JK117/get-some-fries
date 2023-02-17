@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    // "paths": {"@/*": ["src/*"]},
+    "paths": {"@/*": ["src/*"]},
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
