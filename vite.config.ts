@@ -52,7 +52,7 @@ export default defineConfig({
     open: true,
   },
   build: {
-    outDir: '../get-some-fries-dist',
+    // outDir: '../get-some-fries-dist',
     emptyOutDir: true,
     terserOptions: {
       compress: {
