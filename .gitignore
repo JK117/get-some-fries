@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # Github Workflow files
-.github/workflow/*
+# .github/workflow/*
