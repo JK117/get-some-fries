@@ -1,0 +1,84 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: |
+        yarn install
+
+    - name: Build project
+      run: |
+        yarn build
+
+#     - name: List project files
+#       run: |
+#         ls -al
+
+    - name: Deploy to Nginx server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SERVER_IP }}
+        port: ${{ secrets.SERVER_PORT }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ env.SSH_PRIVATE_KEY }}
+        script: |
+          name: Build & Deploy
+
+on:
+  push:
+    branches:
+      - deploy
+
+env:
+  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: |
+        yarn install
+    - name: Build project
+      run: |
+        yarn build
+    - name: List project files
+      run: |
+        ls -al
+    - name: Deploy to Nginx server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SERVER_IP }}
+        port: ${{ secrets.SERVER_PORT }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ env.SSH_PRIVATE_KEY }}
+        script: |
+          sudo cp -r /home/runner/work/get-some-fries/get-some-fries/dist /usr/share/nginx/html/get-some-fries-dist
