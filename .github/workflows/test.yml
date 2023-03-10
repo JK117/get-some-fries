@@ -24,9 +24,15 @@ jobs:
     - name: Install dependencies
       run: |
         yarn install
+
     - name: Build project
       run: |
         yarn build
+
+    - name: List project files
+      run: |
+        ls -al
+
     - name: Deploy to Nginx server
       uses: appleboy/ssh-action@master
       with:
