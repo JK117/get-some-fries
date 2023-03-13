@@ -4,6 +4,7 @@
     <a href="https://gitmoji.dev">
         <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
     </a>
+    ![](https://img.shields.io/github/actions/workflow/status/JK117/get-some-fries/b&d.yml?style=flat-square)
 </p>
 
 ## Intro
