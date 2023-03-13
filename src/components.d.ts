@@ -14,6 +14,7 @@ declare module '@vue/runtime-core' {
     AMenuItem: typeof import('ant-design-vue/es')['MenuItem']
     CardFlow: typeof import('./components/pageviews/CardFlow.vue')['default']
     FlexMenu: typeof import('./components/pageviews/FlexMenu.vue')['default']
+    GsfImage: typeof import('./components/GsfImage.vue')['default']
     MainContentBox: typeof import('./components/pageviews/MainContentBox.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
