@@ -7,13 +7,19 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ACard: typeof import('ant-design-vue/es')['Card']
+    ACol: typeof import('ant-design-vue/es')['Col']
+    AImage: typeof import('ant-design-vue/es')['Image']
     ALayout: typeof import('ant-design-vue/es')['Layout']
     ALayoutContent: typeof import('ant-design-vue/es')['LayoutContent']
     ALayoutSider: typeof import('ant-design-vue/es')['LayoutSider']
     AMenu: typeof import('ant-design-vue/es')['Menu']
     AMenuItem: typeof import('ant-design-vue/es')['MenuItem']
+    ARow: typeof import('ant-design-vue/es')['Row']
+    ASpin: typeof import('ant-design-vue/es')['Spin']
     CardFlow: typeof import('./components/pageviews/CardFlow.vue')['default']
     FlexMenu: typeof import('./components/pageviews/FlexMenu.vue')['default']
+    FlowCard: typeof import('./components/cardflow/FlowCard.vue')['default']
     GsfImage: typeof import('./components/GsfImage.vue')['default']
     MainContentBox: typeof import('./components/pageviews/MainContentBox.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
