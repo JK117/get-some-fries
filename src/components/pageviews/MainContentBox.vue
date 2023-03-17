@@ -11,7 +11,9 @@
 
 <style scoped lang="scss">
 .main-inner-box {
-    display: flex;
     min-height: calc(100% - 1px);
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 }
 </style>
