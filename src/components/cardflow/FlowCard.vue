@@ -1,6 +1,12 @@
 <script setup lang="ts">
+// type  CardProps = {
+//     imgUrl: string,
+//     width: number,
+// }
 const props = defineProps({
-    imgUrl: String
+    imgUrl: String,
+    // width: Number,
+    // height: Number
 })
 </script>
 
@@ -8,7 +14,7 @@ const props = defineProps({
     <a-card
         hoverable
         :bordered="false"
-        style="width: 240px; height: 360px;"
+        style="width: 240px;"
     >
         <template #cover>
             <!-- <img alt="example" :src="imgUrl" /> -->
