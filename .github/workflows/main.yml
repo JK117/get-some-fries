@@ -1,0 +1,42 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  DIST_LOCAL: '/home/runner/work/test-vite-vue/test-vite-vue/dist'
+  DIST_REMOTE: '/usr/share/nginx/html/test-vite-vue'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Install dependencies
+      run: |
+        pnpm install
+    - name: Build project
+      run: |
+        pnpm build
+    - name: List build files
+      run: |
+        ls -al
+
+    - name: Deploy to Nginx server
+      uses: easingthemes/ssh-deploy@v5.1.0
+      with:
+        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        REMOTE_HOST: ${{ secrets.SERVER_IP }}
+        REMOTE_USER: ${{ secrets.SERVER_USER }}
+        SOURCE: ${{ env.DIST_LOCAL }}
+        TARGET: ${{ ENV.DIST_REMOTE }}
