@@ -47,6 +47,7 @@ jobs:
         REMOTE_USER: ${{ secrets.SERVER_USER }}
         SOURCE: ${{ env.DIST_LOCAL }}
         TARGET: ${{ env.DIST_REMOTE }}
+        ARGS: "-rltgoDzvO --delete"
       # uses: wangyucode/sftp-upload-action@v2.0.2
       # with:
       #   host: ${{ secrets.SERVER_IP }}
