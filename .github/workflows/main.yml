@@ -6,7 +6,8 @@ on:
       - main
 
 env:
-  DIST_LOCAL: '/home/runner/work/test-vite-vue/test-vite-vue/dist'
+  # DIST_LOCAL: '/home/runner/work/test-vite-vue/test-vite-vue/dist'
+  DIST_LOCAL: 'dist'
   DIST_REMOTE: '/usr/share/nginx/html/test-vite-vue'
 
 jobs:
@@ -45,7 +46,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         REMOTE_HOST: ${{ secrets.SERVER_IP }}
         REMOTE_USER: ${{ secrets.SERVER_USER }}
-        SOURCE: "/dist"
+        SOURCE: ${{ env.DIST_LOCAL }}
         TARGET: ${{ env.DIST_REMOTE }}
         ARGS: "-rltgoDzvO --delete"
       # uses: wangyucode/sftp-upload-action@v2.0.2
