@@ -7,8 +7,8 @@ on:
 
 env:
   # DIST_LOCAL: '/home/runner/work/test-vite-vue/test-vite-vue/dist'
-  DIST_LOCAL: 'dist'
-  DIST_REMOTE: '/usr/share/nginx/html/test-vite-vue'
+  DIST_LOCAL: 'dist/'
+  DIST_REMOTE: '/usr/share/nginx/html/test-vite-vue-dist'
 
 jobs:
   build:
