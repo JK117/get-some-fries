@@ -42,4 +42,4 @@ jobs:
         REMOTE_HOST: ${{ secrets.SERVER_IP }}
         REMOTE_USER: ${{ secrets.SERVER_USER }}
         SOURCE: ${{ env.DIST_LOCAL }}
-        TARGET: ${{ ENV.DIST_REMOTE }}
+        TARGET: ${{ env.DIST_REMOTE }}
