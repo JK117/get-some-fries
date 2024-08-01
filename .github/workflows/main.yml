@@ -16,16 +16,18 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4.0.0
+      with:
+        version: 9
+        run_install: false
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: 20
-
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v4.0.0
-      with:
-        version: 9
+        cache: 'pnpm'
 
     - name: Install dependencies
       run: |
@@ -33,22 +35,22 @@ jobs:
     - name: Build project
       run: |
         pnpm build
-    - name: List build files
-      run: |
-        ls -al
+    # - name: List build files
+    #   run: |
+    #     ls -al
 
     - name: Deploy to Nginx server
-      # uses: easingthemes/ssh-deploy@v5.1.0
-      # with:
-      #   SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-      #   REMOTE_HOST: ${{ secrets.SERVER_IP }}
-      #   REMOTE_USER: ${{ secrets.SERVER_USER }}
-      #   SOURCE: ${{ env.DIST_LOCAL }}
-      #   TARGET: ${{ env.DIST_REMOTE }}
-      uses: wangyucode/sftp-upload-action@v2.0.2
+      uses: easingthemes/ssh-deploy@v5.1.0
       with:
-        host: ${{ secrets.SERVER_IP }}
-        username: ${{ secrets.SERVER_USER }}
-        privateKey: ${{ secrets.PRIVATE_KEY }}
-        localDir: ${{ env.DIST_LOCAL }}
-        remoteDir: ${{ env.DIST_REMOTE }}
+        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        REMOTE_HOST: ${{ secrets.SERVER_IP }}
+        REMOTE_USER: ${{ secrets.SERVER_USER }}
+        SOURCE: ${{ env.DIST_LOCAL }}
+        TARGET: ${{ env.DIST_REMOTE }}
+      # uses: wangyucode/sftp-upload-action@v2.0.2
+      # with:
+      #   host: ${{ secrets.SERVER_IP }}
+      #   username: ${{ secrets.SERVER_USER }}
+      #   privateKey: ${{ secrets.PRIVATE_KEY }}
+      #   localDir: ${{ env.DIST_LOCAL }}
+      #   remoteDir: ${{ env.DIST_REMOTE }}
