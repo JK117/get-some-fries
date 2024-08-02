@@ -1,5 +1,16 @@
 <h1 align="center">Get Some Fries</h1>
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<p align="center">
+    <a href="https://gitmoji.dev">
+        <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+    </a>
+    <a>
+        <img src="https://img.shields.io/github/actions/workflow/status/JK117/test-vite-vue/main.yml?style=flat-square">
+    </a>
+</p>
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Intro
+Get Some Fries is a personal playground project built with: 
+- Vue3.4
+- Vite 5
+- Ant Design Vue 4
