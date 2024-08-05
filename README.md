@@ -2,9 +2,10 @@
 
 <p align="center">
     <a href="https://gitmoji.dev">
-        <img src="https://img.shields.io/badge/gitmoji-%F0%9F%98%9C%F0%9F%98%8D-FFDD67" alt="Gitmoji">
+        <img src="https://img.shields.io/badge/gitmoji-_😜_😍-FFDD67" alt="Gitmoji">
     </a>
-    <a href="#">
+    &nbsp
+    <a>
         <img src="https://img.shields.io/github/actions/workflow/status/JK117/test-vite-vue/main.yml">
     </a>
 </p>
