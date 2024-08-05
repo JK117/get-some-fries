@@ -4,7 +4,6 @@
     <a href="https://gitmoji.dev">
         <img src="https://img.shields.io/badge/gitmoji-_😜_😍-FFDD67" alt="Gitmoji">
     </a>
-    
     <a>
         <img src="https://img.shields.io/github/actions/workflow/status/JK117/test-vite-vue/main.yml">
     </a>
