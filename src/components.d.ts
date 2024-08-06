@@ -15,6 +15,7 @@ declare module 'vue' {
     AMenu: typeof import('ant-design-vue/es')['Menu']
     AMenuItem: typeof import('ant-design-vue/es')['MenuItem']
     AppSideBar: typeof import('./components/AppSideBar.vue')['default']
+    AppSideBarFooter: typeof import('./components/AppSideBarFooter.vue')['default']
     ASpace: typeof import('ant-design-vue/es')['Space']
     ContentTemplate: typeof import('./components/pageviews/ContentTemplate.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']

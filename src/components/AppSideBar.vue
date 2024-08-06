@@ -40,7 +40,7 @@ watch(
       align="center" 
       style="position:absolute;bottom: 60px;width: 100%;" 
     >
-      <a-button type="link">Filing</a-button>
+      <AppSideBarFooter />
     </a-flex>
   </a-layout-sider>
 </template>
